@@ -1,0 +1,9 @@
+Pregunta 4: Clustering y análisis de grupos.
+
+Dado un DataFrame con variables numéricas.
+Completa la función cluster_analysis(df, n_clusters=3) que:
+
+- Escala los datos con StandardScaler.
+- Aplica KMeans, y retorna un diccionario con "labels" (array con el cluster asignado a cada fila).
+- "inertia" (inercia del modelo) y "cluster_means" (DataFrame con la media de cada variable por cluster).
+
