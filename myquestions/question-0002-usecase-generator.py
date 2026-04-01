@@ -6,18 +6,17 @@ from sklearn.model_selection import cross_validate
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-# Generador de casos de uso
-def create_case_2(n=200, n_features=6, seed=42):
-    np.random.seed(seed)
+def generar_caso_de_uso_select_and_evaluate(n=200, n_features=6):
     X = np.random.normal(0, 1, size=(n, n_features))
-    # Solo las primeras 3 features son realmente relevantes
-    coefs = np.array([5, 3, 2, 0, 0, 0])
+    # Coeficientes aleatorios, solo las primeras k features son relevantes
+    n_relevant = np.random.randint(2, 5)
+    coefs = np.array([np.random.uniform(2, 6) for _ in range(n_relevant)] + 
+                     [0] * (n_features - n_relevant))
     y = X @ coefs + np.random.normal(0, 0.5, size=n)
     df = pd.DataFrame(X, columns=[f"feature_{i}" for i in range(n_features)])
-    df["target"] = y
+    df[target_col] = y
     return df
 
-df = create_case_2()
+df = generar_caso_de_uso_select_and_evaluate()
 print(df.head())
 # result = select_and_evaluate(df, target_col="target", k=3)
-# esperado: best_features=['feature_0','feature_1','feature_2']
