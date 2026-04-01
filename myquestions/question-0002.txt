@@ -1,0 +1,7 @@
+Dado un DataFrame con variables numéricas y una columna target.
+Completa la función select_and_evaluate(df, target_col, k=3) que:
+
+- Selecciona las k mejores características usando SelectKBest con f_regression.
+- Entrena un Ridge regression y retorna un diccionario con las llaves "best_features" (lista con los nombres de las k features seleccionadas)
+-  "cv_rmse" (promedio del RMSE en validación cruzada de 5 folds)
+-  "cv_r2" (promedio del R2 en validación cruzada de 5 folds).
