@@ -1,0 +1,8 @@
+Pregunta 1: Normalización y detección de outliers
+
+Dado un DataFrame con variables numéricas.
+Completa la función detect_outliers(df, threshold=3) que:
+
+- Normaliza cada columna usando StandardScaler.
+- Detecta los outliers (filas donde al menos una variable supera el umbral en valor absoluto).
+- Retorna un DataFrame booleano con las mismas dimensiones indicando qué valores son outliers.
