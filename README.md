@@ -1,1 +1,2 @@
-# Inteligencia-Artificial-Para-Las-Ciencias-Y-Las-Ingenierias
+Estudiante: Juan Daniel Bedoya Meneses
+Correo: daniel.bedoya9@udea.edu.co
