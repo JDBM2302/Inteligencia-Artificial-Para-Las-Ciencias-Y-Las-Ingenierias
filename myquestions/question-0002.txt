@@ -1,3 +1,5 @@
+Pregunta 2: Selección de características y validación cruzada
+
 Dado un DataFrame con variables numéricas y una columna target.
 Completa la función select_and_evaluate(df, target_col, k=3) que:
 
