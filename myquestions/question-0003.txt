@@ -1,0 +1,9 @@
+Pregunta 3: Codificación y clasificación
+
+Dado un DataFrame con variables categóricas y numéricas y una columna target binaria.
+Completa la función classify(df, target_col) que:
+
+- Aplica OneHotEncoder a las columnas categóricas.
+- Aplica StandardScaler a las numéricas usando ColumnTransformer.
+- Entrena un LogisticRegression y retorna un diccionario con "accuracy" y "confusion_matrix" evaluados en el 20% de test.
+
