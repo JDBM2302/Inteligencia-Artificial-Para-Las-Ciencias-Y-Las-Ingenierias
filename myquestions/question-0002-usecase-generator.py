@@ -14,6 +14,5 @@ def generar_caso_de_uso_select_and_evaluate(n=200, n_features=6):
     y = X @ coefs + np.random.normal(0, 0.5, size=n)
     df = pd.DataFrame(X, columns=[f"feature_{i}" for i in range(n_features)])
     df["target"] = y
-    
     k = np.random.randint(2, n_features)
-    return df, k  # 2 elementos ✅
+    return {"df": df, "target_col": "target", "k": k}, k  # dict primero ✅
