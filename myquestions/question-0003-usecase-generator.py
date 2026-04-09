@@ -17,5 +17,4 @@ def generar_caso_de_uso_classify(n=300):
         "city": ciudades, "edu": edu,
         "target": target
     })
-    
-    return df, "target"  # 2 elementos ✅
+    return {"df": df, "target_col": "target"}, "target"  # dict primero ✅
