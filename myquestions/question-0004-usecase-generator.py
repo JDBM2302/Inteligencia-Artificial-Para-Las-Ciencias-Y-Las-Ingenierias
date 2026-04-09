@@ -14,6 +14,5 @@ def generar_caso_de_uso_cluster_analysis(n_clusters=3):
     X = np.vstack(groups)
     np.random.shuffle(X)
     df = pd.DataFrame(X, columns=["x", "y"])
-    
     n_clusters_param = np.random.randint(2, 5)
-    return df, n_clusters_param  # 2 elementos ✅
+    return {"df": df, "n_clusters": n_clusters_param}, n_clusters_param  # dict primero ✅
