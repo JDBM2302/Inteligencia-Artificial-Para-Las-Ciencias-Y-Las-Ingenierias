@@ -12,12 +12,10 @@ def generar_caso_de_uso_classify(n=300):
     age = np.random.randint(18, 65, size=n)
     income = np.random.normal(np.random.uniform(40000, 80000), 15000, size=n)
     target = (income > np.median(income)).astype(int)
-    return pd.DataFrame({
+    df = pd.DataFrame({
         "age": age, "income": income,
         "city": ciudades, "edu": edu,
         "target": target
     })
-
-df = generar_caso_de_uso_classify()
-print(df.head())
-# result = classify(df, target_col="target")
+    
+    return df, "target"  # 2 elementos ✅
