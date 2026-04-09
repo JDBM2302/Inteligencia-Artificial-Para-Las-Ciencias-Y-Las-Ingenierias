@@ -13,4 +13,4 @@ def generar_caso_de_uso_detect_outliers(n=100, n_features=4):
         df.iloc[row, col] = np.random.choice([-1, 1]) * np.random.uniform(10, 15)
     
     threshold = np.random.choice([2, 3])
-    return df, threshold  # 2 elementos ✅
+    return {"df": df, "threshold": threshold}, threshold  # dict primero ✅
